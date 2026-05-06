@@ -59,6 +59,10 @@ if (navToggle && nav) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeNavigation();
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeNavigation();
+  });
 }
 
 const revealItems = document.querySelectorAll(
